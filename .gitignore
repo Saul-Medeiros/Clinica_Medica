@@ -3,3 +3,9 @@ build/
 
 # ignore netbeans files
 nbproject/
+
+# ignore xml file
+*.xml
+
+# ignore manifest
+*.mf
