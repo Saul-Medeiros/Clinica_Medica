@@ -1,11 +1,11 @@
 # ignore builds
 build/
 
-# ignore netbeans files
-nbproject/
-
-# ignore xml file
-*.xml
+# ignore build file
+build.xml
 
 # ignore manifest
 *.mf
+
+# ignore private
+nbproject/private/
