@@ -1,0 +1,5 @@
+# ignore builds
+build/
+
+# ignore netbeans files
+nbproject/
