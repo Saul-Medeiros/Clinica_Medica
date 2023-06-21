@@ -1,5 +1,3 @@
-/* Consultar alterações de cpf e núumero (formatação do java) */
-
 package persistencia;
 
 import java.sql.Connection;
@@ -29,7 +27,8 @@ public class PacienteDAO {
                 Paciente paciente = new Paciente();
                 
                 paciente.setCpf(resultSet.getString("cpf"));
-                paciente.setEndereco(EnderecoDAO.leUm(resultSet.getInt("endereco_id")));
+                paciente.setEndereco(EnderecoDAO.leUm(resultSet.getInt(
+                        "endereco_id")));
                 paciente.setNome(resultSet.getString("nome"));
                 paciente.setTelefone(resultSet.getString("telefone"));
                 
@@ -61,7 +60,8 @@ public class PacienteDAO {
                 Paciente paciente = new Paciente();
                 
                 paciente.setCpf(resultSet.getString("cpf"));
-                paciente.setEndereco(EnderecoDAO.leUm(resultSet.getInt("endereco_id")));
+                paciente.setEndereco(EnderecoDAO.leUm(resultSet.getInt(
+                        "endereco_id")));
                 paciente.setNome(resultSet.getString("nome"));
                 paciente.setTelefone(resultSet.getString("telefone"));
                 
@@ -77,7 +77,8 @@ public class PacienteDAO {
     }
     
     // in
-    public static List<Paciente> leTodos(String cpfMenor, String cpfMaior) throws Exception {
+    public static List<Paciente> leTodos(String cpfMenor, String cpfMaior)
+            throws Exception {
         List<Paciente> listaPaciente = new ArrayList<>();
         
         try {
@@ -94,7 +95,8 @@ public class PacienteDAO {
                 Paciente paciente = new Paciente();
                 
                 paciente.setCpf(resultSet.getString("cpf"));
-                paciente.setEndereco(EnderecoDAO.leUm(resultSet.getInt("endereco_id")));
+                paciente.setEndereco(EnderecoDAO.leUm(resultSet.getInt(
+                        "endereco_id")));
                 paciente.setNome(resultSet.getString("nome"));
                 paciente.setTelefone(resultSet.getString("telefone"));
                 
@@ -110,7 +112,8 @@ public class PacienteDAO {
     }
     
     // not between
-    public static List<Paciente> leTodos(long cpfMenor, String cpfMaior) throws Exception {
+    public static List<Paciente> leTodos(long cpfMenor, String cpfMaior)
+            throws Exception {
         List<Paciente> listaPaciente = new ArrayList<>();
         
         try {
@@ -127,7 +130,8 @@ public class PacienteDAO {
                 Paciente paciente = new Paciente();
                 
                 paciente.setCpf(resultSet.getString("cpf"));
-                paciente.setEndereco(EnderecoDAO.leUm(resultSet.getInt("endereco_id")));
+                paciente.setEndereco(EnderecoDAO.leUm(resultSet.getInt(
+                        "endereco_id")));
                 paciente.setNome(resultSet.getString("nome"));
                 paciente.setTelefone(resultSet.getString("telefone"));
                 
@@ -146,7 +150,7 @@ public class PacienteDAO {
         Paciente paciente = new Paciente();
         
         try {
-            String sql = "SELECT * FROM paciente WHERE matricula = ?";
+            String sql = "SELECT * FROM paciente WHERE cpf = ?";
             connection = GerenteDeConexao.getConnection();
             
             prepareStatement = connection.prepareStatement(sql);
@@ -156,7 +160,8 @@ public class PacienteDAO {
             
             if (resultSet.next()) {
                 paciente.setCpf(resultSet.getString("cpf"));
-                paciente.setEndereco(EnderecoDAO.leUm(resultSet.getInt("endereco_id")));
+                paciente.setEndereco(EnderecoDAO.leUm(resultSet.getInt(
+                        "endereco_id")));
                 paciente.setNome(resultSet.getString("nome"));
                 paciente.setTelefone(resultSet.getString("telefone"));
             }
@@ -169,7 +174,6 @@ public class PacienteDAO {
         return paciente;
     }
     
-    //grava
     public static String grava(Paciente paciente) throws Exception {
         int row = 0;
         
@@ -194,7 +198,8 @@ public class PacienteDAO {
     }
     
     //not in
-    public static String altera(Paciente paciente, String menorCpf, String maiorCpf) throws Exception {
+    public static String altera(Paciente paciente, String menorCpf,
+                                String maiorCpf) throws Exception {
         int row = 0;
         
         try {
@@ -220,8 +225,9 @@ public class PacienteDAO {
         return row + " rows affected.";
     }
     
-    //=
-    public static String altera(Paciente paciente, String cpf) throws Exception {
+    // equals
+    public static String altera(Paciente paciente, String cpf)
+            throws Exception {
         int row = 0;
         
         try {
@@ -247,7 +253,8 @@ public class PacienteDAO {
     }
     
     //and
-    public static String altera(Paciente paciente, long cpf, String antigoNome) throws Exception {
+    public static String altera(Paciente paciente, long cpf, String antigoNome)
+            throws Exception {
         int row = 0;
         
         try {

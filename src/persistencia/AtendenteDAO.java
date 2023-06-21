@@ -228,7 +228,7 @@ public class AtendenteDAO {
         return row + " rows affected.";
     }
     
-    //=
+    // equals
     public static String altera(String nome, String formacao, int enderecoId,
                                 int matricula) throws Exception {
         int row = 0;

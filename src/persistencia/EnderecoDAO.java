@@ -164,7 +164,6 @@ public class EnderecoDAO {
         return endereco;
     }
     
-    //grava
     public static String grava(Endereco endereco) throws Exception {
         int row = 0;
         
@@ -215,7 +214,7 @@ public class EnderecoDAO {
         return row + " rows affected.";
     }
     
-    //=
+    // equals
     public static String altera(Endereco endereco, int id) throws Exception {
         int row = 0;
         

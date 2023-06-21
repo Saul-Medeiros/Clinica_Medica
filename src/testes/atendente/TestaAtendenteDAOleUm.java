@@ -6,8 +6,8 @@ public class TestaAtendenteDAOleUm {
 
     public static void main(String[] args) throws Exception {
         
-        // matricula
-        System.out.println(AtendenteDAO.leUm(0));
+        // int
+        System.out.println(AtendenteDAO.leUm(567));
         
     }
     

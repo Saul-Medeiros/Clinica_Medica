@@ -27,7 +27,8 @@ public class ConsultorioDAO {
                 Consultorio consultorio = new Consultorio();
                 
                 consultorio.setNumero(resultSet.getInt("numero"));
-                consultorio.setEndereco(EnderecoDAO.leUm(resultSet.getInt("endereco_id")));
+                consultorio.setEndereco(EnderecoDAO.leUm(resultSet.getInt(
+                        "endereco_id")));
                 
                 listaConsultorio.add(consultorio);
             }
@@ -60,7 +61,8 @@ public class ConsultorioDAO {
                 Consultorio consultorio = new Consultorio();
                 
                 consultorio.setNumero(resultSet.getInt("c.numero"));
-                consultorio.setEndereco(EnderecoDAO.leUm(resultSet.getInt("e.id")));
+                consultorio.setEndereco(EnderecoDAO.leUm(
+                        resultSet.getInt("e.id")));
                 
                 listaConsultorio.add(consultorio);
             }
@@ -74,7 +76,8 @@ public class ConsultorioDAO {
     }
     
     // in
-    public static List<Consultorio> leTodos(int numeroMenor, int numeroMaior) throws Exception {
+    public static List<Consultorio> leTodos(int numeroMenor, int numeroMaior)
+            throws Exception {
         List<Consultorio> listaConsultorio = new ArrayList<>();
         
         try {
@@ -91,7 +94,8 @@ public class ConsultorioDAO {
                 Consultorio consultorio = new Consultorio();
                 
                 consultorio.setNumero(resultSet.getInt("numero"));
-                consultorio.setEndereco(EnderecoDAO.leUm(resultSet.getInt("endereco_id")));
+                consultorio.setEndereco(EnderecoDAO.leUm(resultSet.getInt(
+                        "endereco_id")));
                 
                 listaConsultorio.add(consultorio);
             }
@@ -105,11 +109,13 @@ public class ConsultorioDAO {
     }
     
     // not between
-    public static List<Consultorio> leTodos(short numeroMenor, int numeroMaior) throws Exception {
+    public static List<Consultorio> leTodos(short numeroMenor, int numeroMaior)
+            throws Exception {
         List<Consultorio> listaConsultorio = new ArrayList<>();
         
         try {
-            String sql = "SELECT * FROM consultorio WHERE numero NOT BETWEEN ? AND ?";
+            String sql = "SELECT * FROM consultorio"
+                    + " WHERE numero NOT BETWEEN ? AND ?";
             connection = GerenteDeConexao.getConnection();
             
             prepareStatement = connection.prepareStatement(sql);
@@ -122,7 +128,8 @@ public class ConsultorioDAO {
                 Consultorio consultorio = new Consultorio();
                 
                 consultorio.setNumero(resultSet.getInt("numero"));
-                consultorio.setEndereco(EnderecoDAO.leUm(resultSet.getInt("endereco_id")));
+                consultorio.setEndereco(EnderecoDAO.leUm(resultSet.getInt(
+                        "endereco_id")));
                 
                 listaConsultorio.add(consultorio);
             }
@@ -149,7 +156,8 @@ public class ConsultorioDAO {
             
             if (resultSet.next()) {
                 consultorio.setNumero(resultSet.getInt("numero"));
-                consultorio.setEndereco(EnderecoDAO.leUm(resultSet.getInt("endereco_id")));
+                consultorio.setEndereco(EnderecoDAO.leUm(resultSet.getInt(
+                        "endereco_id")));
             }
             
             prepareStatement.close();
@@ -183,7 +191,8 @@ public class ConsultorioDAO {
     }
     
     //not in
-    public static String altera(int enderecoId, int menorNumero, int maiorNumero) throws Exception {
+    public static String altera(int enderecoId, int menorNumero,
+                                int maiorNumero) throws Exception {
         int row = 0;
         
         try {
@@ -207,7 +216,7 @@ public class ConsultorioDAO {
         return row + " rows affected.";
     }
     
-    //=
+    // equals
     public static String altera(int enderecoId, int numero) throws Exception {
         int row = 0;
         
@@ -231,7 +240,8 @@ public class ConsultorioDAO {
     }
     
     //and
-    public static String altera(int enderecoId, Consultorio consultorio) throws Exception {
+    public static String altera(int enderecoId, Consultorio consultorio)
+            throws Exception {
         int row = 0;
         
         try {

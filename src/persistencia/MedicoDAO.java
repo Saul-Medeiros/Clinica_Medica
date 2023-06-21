@@ -184,7 +184,6 @@ public class MedicoDAO {
         return medico;
     }
     
-    //grava
     public static String grava(Medico medico) throws Exception {
         int row = 0;
         
@@ -240,7 +239,7 @@ public class MedicoDAO {
         return row + " rows affected.";
     }
     
-    //=
+    // equals
     public static String altera(Medico medico, String crm) throws Exception {
         int row = 0;
         

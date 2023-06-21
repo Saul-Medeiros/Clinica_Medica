@@ -255,7 +255,7 @@ public class ConsultaDAO {
         return row + " rows affected.";
     }
     
-    //=
+    //equals
     public static String altera(Consulta consulta, int numero) 
             throws Exception {
         int row = 0;
