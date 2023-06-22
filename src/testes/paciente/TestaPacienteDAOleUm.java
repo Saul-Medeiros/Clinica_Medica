@@ -6,8 +6,8 @@ public class TestaPacienteDAOleUm {
 
     public static void main(String[] args) throws Exception {
         
-        // String
-        System.out.println(PacienteDAO.leUm(""));
+        // String(cpf)
+        System.out.println(PacienteDAO.leUm("11111111111"));
         
     }
     

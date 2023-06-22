@@ -6,8 +6,8 @@ public class TestaEnderecoDAOleTodosIN {
 
     public static void main(String[] args) throws Exception {
         
-        // int, int
-        System.out.println(EnderecoDAO.leTodos(0, 0));
+        // int(id), int(id)
+        System.out.println(EnderecoDAO.leTodos(1, 3));
         
     }
     

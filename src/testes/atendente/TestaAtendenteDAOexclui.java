@@ -6,8 +6,8 @@ public class TestaAtendenteDAOexclui {
 
     public static void main(String[] args) throws Exception {
         
-        // int
-        System.out.println(AtendenteDAO.exclui(0));
+        // int(matricula)
+        System.out.println(AtendenteDAO.exclui(555));
         
     }
     

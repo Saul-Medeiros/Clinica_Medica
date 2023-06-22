@@ -118,7 +118,7 @@ public class AtendenteDAO {
         
         try {
             String sql = "SELECT * FROM atendente"
-                    + " WHERE nome NOT BETWEEN ? AND ?";
+                    + " WHERE matricula NOT BETWEEN ? AND ?";
             connection = GerenteDeConexao.getConnection();
             
             prepareStatement = connection.prepareStatement(sql);

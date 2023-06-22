@@ -10,16 +10,16 @@ public class TestaConsultorioDAOalteraAND {
         
         /* --- WHERE actions --- */
         Consultorio consultorio = new Consultorio();
-        consultorio.setNumero(0);
+        consultorio.setNumero(40); // padrão: 2 dígitos
         
         Endereco endereco = new Endereco();
-        endereco.setId(0); // id para consulta
+        endereco.setId(5); // padrão: 1 dígito
         
         consultorio.setEndereco(endereco);
         /* --------------------- */
         
-        // int[SET action], Object
-        System.out.println(ConsultorioDAO.altera(0, consultorio));
+        // int(enderecoId)[SET action], Object
+        System.out.println(ConsultorioDAO.altera(3, consultorio));
         
     }
     

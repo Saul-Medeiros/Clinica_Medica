@@ -10,14 +10,14 @@ public class TestaMedicoDAOgrava {
     public static void main(String[] args) throws Exception {
         
         Medico medico = new Medico();
-        medico.setCrm("");
-        medico.setNome("");
-        medico.setEspecialidade("");
+        medico.setCrm("77777777"); // padrão: 8 dígitos
+        medico.setNome("Gabriel");
+        medico.setEspecialidade("Radiologista");
         
         Endereco endereco = new Endereco();
-        endereco.setId(0);
+        endereco.setId(5);
         Consultorio consultorio = new Consultorio();
-        consultorio.setNumero(0);
+        consultorio.setNumero(40);
         
         medico.setEndereco(endereco);
         medico.setConsultorio(consultorio);

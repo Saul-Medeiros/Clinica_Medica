@@ -6,8 +6,8 @@ public class TestaMedicoDAOexclui {
 
     public static void main(String[] args) throws Exception {
         
-        // String
-        System.out.println(MedicoDAO.exclui(""));
+        // String(crm)
+        System.out.println(MedicoDAO.exclui("33333333"));
         
     }
     

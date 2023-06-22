@@ -6,8 +6,8 @@ public class TestaConsultorioDAOleTodosIN {
 
     public static void main(String[] args) throws Exception {
         
-        // int, int
-        System.out.println(ConsultorioDAO.leTodos(0, 0));
+        // int(numero), int(numero)
+        System.out.println(ConsultorioDAO.leTodos(35, 40));
         
     }
     

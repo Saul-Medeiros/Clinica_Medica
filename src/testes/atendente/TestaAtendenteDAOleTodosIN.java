@@ -6,8 +6,8 @@ public class TestaAtendenteDAOleTodosIN {
 
     public static void main(String[] args) throws Exception {
         
-        // int, int
-        System.out.println(AtendenteDAO.leTodos(0, 0));
+        // int(menorMatricula), int(maiorMatricula)
+        System.out.println(AtendenteDAO.leTodos(111, 333));
         
     }
     

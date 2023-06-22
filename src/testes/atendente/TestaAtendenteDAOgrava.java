@@ -9,12 +9,12 @@ public class TestaAtendenteDAOgrava {
     public static void main(String[] args) throws Exception {
         
         Atendente atendente = new Atendente();
-        atendente.setMatricula(0);
-        atendente.setNome("");
-        atendente.setFormacao("");
+        atendente.setMatricula(777);
+        atendente.setNome("Caio");
+        atendente.setFormacao("Ensino Fundamental Incompleto");
         
         Endereco endereco = new Endereco();
-        endereco.setId(0);
+        endereco.setId(5);
         
         atendente.setEndereco(endereco);
         

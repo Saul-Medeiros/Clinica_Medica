@@ -6,8 +6,8 @@ public class TestaPacienteDAOleTodosLIKE {
 
     public static void main(String[] args) throws Exception {
         
-        // char
-        System.out.println(PacienteDAO.leTodos('.'));
+        // char(primeira letra do nome do paciente)
+        System.out.println(PacienteDAO.leTodos('P'));
         
     }
     

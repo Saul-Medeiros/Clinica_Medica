@@ -28,7 +28,7 @@ public class EnderecoDAO {
                 
                 endereco.setId(resultSet.getInt("id"));
                 endereco.setRua(resultSet.getString("rua"));
-                endereco.setNumero(resultSet.getInt("numero"));
+                endereco.setCep(resultSet.getInt("cep"));
                 
                 listaEndereco.add(endereco);
             }
@@ -59,7 +59,7 @@ public class EnderecoDAO {
                 
                 endereco.setId(resultSet.getInt("id"));
                 endereco.setRua(resultSet.getString("rua"));
-                endereco.setNumero(resultSet.getInt("numero"));
+                endereco.setCep(resultSet.getInt("cep"));
                 
                 listaEndereco.add(endereco);
             }
@@ -92,7 +92,7 @@ public class EnderecoDAO {
                 
                 endereco.setId(resultSet.getInt("id"));
                 endereco.setRua(resultSet.getString("rua"));
-                endereco.setNumero(resultSet.getInt("numero"));
+                endereco.setCep(resultSet.getInt("cep"));
                 
                 listaEndereco.add(endereco);
             }
@@ -125,7 +125,7 @@ public class EnderecoDAO {
                 
                 endereco.setId(resultSet.getInt("id"));
                 endereco.setRua(resultSet.getString("rua"));
-                endereco.setNumero(resultSet.getInt("numero"));
+                endereco.setCep(resultSet.getInt("cep"));
                 
                 listaEndereco.add(endereco);
             }
@@ -153,7 +153,7 @@ public class EnderecoDAO {
             if (resultSet.next()) {
                 endereco.setId(resultSet.getInt("id"));
                 endereco.setRua(resultSet.getString("rua"));
-                endereco.setNumero(resultSet.getInt("numero"));
+                endereco.setCep(resultSet.getInt("cep"));
             }
             
             prepareStatement.close();
@@ -168,14 +168,14 @@ public class EnderecoDAO {
         int row = 0;
         
         try {
-            String sql = "INSERT INTO endereco(id, rua, numero)"
+            String sql = "INSERT INTO endereco(id, rua, cep)"
                     + " VALUES(?, ?, ?)";
             connection = GerenteDeConexao.getConnection();
             
             prepareStatement = connection.prepareStatement(sql);
             prepareStatement.setInt(1, endereco.getId());
             prepareStatement.setString(2, endereco.getRua());
-            prepareStatement.setInt(3, endereco.getNumero());
+            prepareStatement.setInt(3, endereco.getCep());
             
             row = prepareStatement.executeUpdate();
             
@@ -188,19 +188,19 @@ public class EnderecoDAO {
     }
 
     //not in
-    public static String altera(String rua, int numero, int menorId,
+    public static String altera(String rua, int cep, int menorId,
                                 int maiorId) throws Exception {
         int row = 0;
         
         try {
             String sql = "UPDATE endereco"
-                    + " SET rua = ?, numero = ?"
+                    + " SET rua = ?, cep = ?"
                     + " WHERE id NOT IN (?, ?)";
             connection = GerenteDeConexao.getConnection();
             
             prepareStatement = connection.prepareStatement(sql);
             prepareStatement.setString(1, rua);
-            prepareStatement.setInt(2, numero);
+            prepareStatement.setInt(2, cep);
             prepareStatement.setInt(3, menorId);
             prepareStatement.setInt(4, maiorId);
             
@@ -220,13 +220,13 @@ public class EnderecoDAO {
         
         try {
             String sql = "UPDATE endereco"
-                    + " SET rua = ?, numero = ?"
+                    + " SET rua = ?, cep = ?"
                     + " WHERE id = ?";
             connection = GerenteDeConexao.getConnection();
             
             prepareStatement = connection.prepareStatement(sql);
             prepareStatement.setString(1, endereco.getRua());
-            prepareStatement.setInt(2, endereco.getNumero());
+            prepareStatement.setInt(2, endereco.getCep());
             prepareStatement.setInt(3, id);
             
             row = prepareStatement.executeUpdate();
@@ -246,13 +246,13 @@ public class EnderecoDAO {
         
         try {
             String sql = "UPDATE endereco"
-                    + " SET rua = ?, numero = ?"
+                    + " SET rua = ?, cep = ?"
                     + " WHERE id = ? AND rua = ?";
             connection = GerenteDeConexao.getConnection();
             
             prepareStatement = connection.prepareStatement(sql);
             prepareStatement.setString(1, endereco.getRua());
-            prepareStatement.setInt(2, endereco.getNumero());
+            prepareStatement.setInt(2, endereco.getCep());
             prepareStatement.setInt(3, id);
             prepareStatement.setString(4, ruaAntiga);
             

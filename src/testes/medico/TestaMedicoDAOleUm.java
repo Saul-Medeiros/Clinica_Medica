@@ -6,8 +6,8 @@ public class TestaMedicoDAOleUm {
 
     public static void main(String[] args) throws Exception {
         
-        // String
-        System.out.println(MedicoDAO.leUm(""));
+        // String(crm)
+        System.out.println(MedicoDAO.leUm("11111111"));
         
     }
     

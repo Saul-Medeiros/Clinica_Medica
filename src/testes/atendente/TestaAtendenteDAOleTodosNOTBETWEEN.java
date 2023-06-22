@@ -6,8 +6,8 @@ public class TestaAtendenteDAOleTodosNOTBETWEEN {
 
     public static void main(String[] args) throws Exception {
         
-        // short, int
-        System.out.println(AtendenteDAO.leTodos((short)0, 0));
+        // short(menorMatricula), int(maiorMatricula)
+        System.out.println(AtendenteDAO.leTodos((short)111, 333));
         
     }
     

@@ -24,7 +24,7 @@ USE `clinica_medica` ;
 CREATE TABLE IF NOT EXISTS `clinica_medica`.`endereco` (
   `id` INT NOT NULL,
   `rua` VARCHAR(100) NOT NULL,
-  `numero` INT NOT NULL,
+  `cep` INT NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC))
 ENGINE = InnoDB;

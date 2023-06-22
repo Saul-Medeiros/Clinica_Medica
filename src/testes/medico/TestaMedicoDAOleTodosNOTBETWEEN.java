@@ -6,8 +6,8 @@ public class TestaMedicoDAOleTodosNOTBETWEEN {
 
     public static void main(String[] args) throws Exception {
         
-        // long, String
-        System.out.println(MedicoDAO.leTodos((long)0, ""));
+        // long(crm), String(crm)
+        System.out.println(MedicoDAO.leTodos(33333333L, "55555555"));
         
     }
     

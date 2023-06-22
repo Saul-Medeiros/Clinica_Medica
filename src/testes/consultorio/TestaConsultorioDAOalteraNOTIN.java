@@ -6,8 +6,9 @@ public class TestaConsultorioDAOalteraNOTIN {
 
     public static void main(String[] args) throws Exception {
         
-        // int(enderecoID)[SET action], int(numero)[WHERE action], int(numero)[WHERE action]
-        System.out.println(ConsultorioDAO.altera(0, 0, 0));
+        // int(enderecoID)[SET action], 
+        // int(numero), int(numero)[WHERE actions]
+        System.out.println(ConsultorioDAO.altera(1, 35, 40));
         
     }
     

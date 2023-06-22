@@ -16,20 +16,21 @@ public class TestaConsultaDAOalteraNOTIN {
         consulta.setHorario(""); // padrão: hh:mm ou hh:mm:ss
         
         Atendente atendente = new Atendente();
-        atendente.setMatricula(0);
+        atendente.setMatricula(333); // padrão: 3 dígitos
         
         Paciente paciente = new Paciente();
-        paciente.setCpf(""); // padrão: 11111111111
+        paciente.setCpf("11111111111"); // padrão: 11 dígitos
         
         Medico medico = new Medico();
-        medico.setCrm(""); // padrão: 11111111
+        medico.setCrm("22222222"); // padrão: 8 dígitos
         
         consulta.setAtendente(atendente);
         consulta.setPaciente(paciente);
         consulta.setMedico(medico);
         
-        // Object, int, int
-        System.out.println(ConsultaDAO.altera(consulta, 0, 0));
+        // Object[SET actions],
+        // int(menorNumero), int(maiorNumero) [WHERE actions]
+        System.out.println(ConsultaDAO.altera(consulta, 1, 5));
         
     }
     

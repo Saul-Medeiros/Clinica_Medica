@@ -6,8 +6,8 @@ public class TestaConsultaDAOleTodosNOTBETWEEN {
 
     public static void main(String[] args) throws Exception {
         
-        // short, int
-        System.out.println(ConsultaDAO.leTodos((short)0, 0));
+        // short(numeroMenor), int(numeroMaior)
+        System.out.println(ConsultaDAO.leTodos((short)1, 3));
         
     }
     

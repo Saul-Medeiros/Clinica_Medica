@@ -9,16 +9,16 @@ public class TestaAtendenteDAOalteraAND {
     public static void main(String[] args) throws Exception {
         
         Atendente atendente = new Atendente();
-        atendente.setNome("");
-        atendente.setFormacao("");
+        atendente.setNome("Adolfo");
+        atendente.setFormacao("Superior em TI");
         
         Endereco endereco = new Endereco();
-        endereco.setId(0);
+        endereco.setId(2);
         
         atendente.setEndereco(endereco);
         
-        // Object, int, char
-        System.out.println(AtendenteDAO.altera(atendente, 0, '.'));
+        // Object[SET actions], int(matricula), char(letra)
+        System.out.println(AtendenteDAO.altera(atendente, 555, 'R'));
         
     }
     

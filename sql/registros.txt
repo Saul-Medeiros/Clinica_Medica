@@ -1,0 +1,206 @@
+[
+ ===== Dados da Consulta =====
+ Número: 1
+ Data: 26/06/2023
+ Horário: 15:00:00
+
+ ---- Dados do Atendente -----
+ Matrícula: 111
+ Formação: Ensino médio
+ Nome: João
+ --- Endereço ---
+ ID: 1
+ Rua: Santa Maria
+ Número: 255
+
+ ----- Dados do Paciente -----
+ CPF: 111.111.111-11
+ Telefone: (61) 94002-8922
+ Nome: Saul
+ --- Endereço ---
+ ID: 2
+ Rua: Riacho Fundo 2
+ Número: 898
+
+ ------ Dados do Médico ------
+ CRM: 55555555
+ Nome: Glauder
+ Especialidade: Endocrinologista
+ --- Endereço ---
+ ID: 3
+ Rua: Gama Oeste
+ Número: 2051
+
+ -------- Consultório --------
+ Número: 25
+ --- Endereço ---
+ ID: 4
+ Rua: Taguatinga Sul
+ Número: 872
+
+ =============================
+, 
+ ===== Dados da Consulta =====
+ Número: 2
+ Data: 01/03/2023
+ Horário: 16:00:00
+
+ ---- Dados do Atendente -----
+ Matrícula: 222
+ Formação: Ensino Médio
+ Nome: Larissa
+ --- Endereço ---
+ ID: 2
+ Rua: Riacho Fundo 2
+ Número: 898
+
+ ----- Dados do Paciente -----
+ CPF: 222.222.222-22
+ Telefone: (61) 99292-9292
+ Nome: Marcos
+ --- Endereço ---
+ ID: 1
+ Rua: Santa Maria
+ Número: 255
+
+ ------ Dados do Médico ------
+ CRM: 11111111
+ Nome: Miguel
+ Especialidade: Nutricionista
+ --- Endereço ---
+ ID: 1
+ Rua: Santa Maria
+ Número: 255
+
+ -------- Consultório --------
+ Número: 20
+ --- Endereço ---
+ ID: 2
+ Rua: Riacho Fundo 2
+ Número: 898
+
+ =============================
+, 
+ ===== Dados da Consulta =====
+ Número: 3
+ Data: 07/02/2022
+ Horário: 12:00:00
+
+ ---- Dados do Atendente -----
+ Matrícula: 333
+ Formação: Ensino Médio
+ Nome: Mateus
+ --- Endereço ---
+ ID: 3
+ Rua: Gama Oeste
+ Número: 2051
+
+ ----- Dados do Paciente -----
+ CPF: 333.333.333-33
+ Telefone: (61) 99393-9393
+ Nome: Yago
+ --- Endereço ---
+ ID: 3
+ Rua: Gama Oeste
+ Número: 2051
+
+ ------ Dados do Médico ------
+ CRM: 22222222
+ Nome: Pedro
+ Especialidade: Cardiologista
+ --- Endereço ---
+ ID: 2
+ Rua: Riacho Fundo 2
+ Número: 898
+
+ -------- Consultório --------
+ Número: 30
+ --- Endereço ---
+ ID: 1
+ Rua: Santa Maria
+ Número: 255
+
+ =============================
+, 
+ ===== Dados da Consulta =====
+ Número: 4
+ Data: 17/05/2012
+ Horário: 13:00:00
+
+ ---- Dados do Atendente -----
+ Matrícula: 444
+ Formação: Superior em Administração
+ Nome: Carlos
+ --- Endereço ---
+ ID: 4
+ Rua: Taguatinga Sul
+ Número: 872
+
+ ----- Dados do Paciente -----
+ CPF: 444.444.444-44
+ Telefone: (61) 99494-9494
+ Nome: Priscila
+ --- Endereço ---
+ ID: 4
+ Rua: Taguatinga Sul
+ Número: 872
+
+ ------ Dados do Médico ------
+ CRM: 33333333
+ Nome: Hugo
+ Especialidade: Dentista
+ --- Endereço ---
+ ID: 4
+ Rua: Taguatinga Sul
+ Número: 872
+
+ -------- Consultório --------
+ Número: 35
+ --- Endereço ---
+ ID: 3
+ Rua: Gama Oeste
+ Número: 2051
+
+ =============================
+, 
+ ===== Dados da Consulta =====
+ Número: 5
+ Data: 16/08/2017
+ Horário: 09:00:00
+
+ ---- Dados do Atendente -----
+ Matrícula: 555
+ Formação: Superior em Gestão de RH
+ Nome: Ronaldo
+ --- Endereço ---
+ ID: 5
+ Rua: Ceilandia
+ Número: 333
+
+ ----- Dados do Paciente -----
+ CPF: 555.555.555-55
+ Telefone: (61) 99595-9595
+ Nome: Yasmim
+ --- Endereço ---
+ ID: 5
+ Rua: Ceilandia
+ Número: 333
+
+ ------ Dados do Médico ------
+ CRM: 44444444
+ Nome: Victória
+ Especialidade: Fisioterapeuta
+ --- Endereço ---
+ ID: 5
+ Rua: Ceilandia
+ Número: 333
+
+ -------- Consultório --------
+ Número: 40
+ --- Endereço ---
+ ID: 5
+ Rua: Ceilandia
+ Número: 333
+
+ =============================
+]

@@ -12,24 +12,24 @@ public class TestaConsultaDAOalteraEQUALS {
         
         Consulta consulta = new Consulta();
         
-        consulta.setData(""); // padrão: yy-MM-dd ou dd/MM/yy
-        consulta.setHorario(""); // padrão: hh:mm ou hh:mm:ss
+        consulta.setData("07/02/2023"); // padrão: yy-MM-dd ou dd/MM/yy
+        consulta.setHorario("21:00"); // padrão: hh:mm ou hh:mm:ss
         
         Atendente atendente = new Atendente();
-        atendente.setMatricula(0);
+        atendente.setMatricula(555); // padrão: 3 dígitos
         
         Paciente paciente = new Paciente();
-        paciente.setCpf(""); // padrão: 11111111111
+        paciente.setCpf("22222222222"); // padrão: 11 dígitos
         
         Medico medico = new Medico();
-        medico.setCrm(""); // padrão: 11111111
+        medico.setCrm("44444444"); // padrão: 8 dígitos
         
         consulta.setAtendente(atendente);
         consulta.setPaciente(paciente);
         consulta.setMedico(medico);
         
         // Object, int
-        System.out.println(ConsultaDAO.altera(consulta, 0));
+        System.out.println(ConsultaDAO.altera(consulta, 5));
         
     }
     

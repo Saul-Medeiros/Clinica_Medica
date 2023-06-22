@@ -6,8 +6,8 @@ public class TestaEnderecoDAOleTodosNOTBETWEEN {
 
     public static void main(String[] args) throws Exception {
         
-        // short, int
-        System.out.println(EnderecoDAO.leTodos((short)0, 0));
+        // short(id), int(id)
+        System.out.println(EnderecoDAO.leTodos((short)1, 3));
         
     }
     

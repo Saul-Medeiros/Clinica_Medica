@@ -189,6 +189,8 @@ public class PacienteDAO {
             prepareStatement.setString(3, paciente.getTelefone());
             prepareStatement.setInt(4, paciente.getEndereco().getId());
             
+            row = prepareStatement.executeUpdate();
+            
             prepareStatement.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());

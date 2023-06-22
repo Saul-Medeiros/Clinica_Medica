@@ -8,11 +8,12 @@ public class TestaEnderecoDAOalteraAND {
     public static void main(String[] args) throws Exception {
         
         Endereco endereco = new Endereco();
-        endereco.setRua("");
-        endereco.setNumero(0);
+        endereco.setRua("Plano Piloto");
+        endereco.setCep(881); // padrão: 3 a 4 dígitos
         
-        // Object, int, String
-        System.out.println(EnderecoDAO.altera(endereco, 0, ""));
+        // Object[SET action], 
+        // int(id), String(rua) [WHERE actions]
+        System.out.println(EnderecoDAO.altera(endereco, 5, "Ceilandia"));
         
     }
     

@@ -6,9 +6,9 @@ public class TestaEnderecoDAOalteraNOTIN {
 
     public static void main(String[] args) throws Exception {
         
-        // String, int [SET actions]
-        // int, int [WHERE actions]
-        System.out.println(EnderecoDAO.altera("", 0, 0, 0));
+        // String(rua), int(cep) [SET actions]
+        // int(id), int(id) [WHERE actions]
+        System.out.println(EnderecoDAO.altera("Plano Piloto", 882, 1, 3));
         
     }
     
