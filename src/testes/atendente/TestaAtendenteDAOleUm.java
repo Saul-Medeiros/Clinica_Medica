@@ -6,7 +6,6 @@ public class TestaAtendenteDAOleUm {
 
     public static void main(String[] args) throws Exception {
         
-        // int
         System.out.println(AtendenteDAO.leUm(555));
         
     }

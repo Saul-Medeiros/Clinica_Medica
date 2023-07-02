@@ -18,7 +18,6 @@ public class TestaAtendenteDAOgrava {
         
         atendente.setEndereco(endereco);
         
-        // Object
         System.out.println(AtendenteDAO.grava(atendente));
         
     }
