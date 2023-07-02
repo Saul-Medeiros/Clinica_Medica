@@ -29,8 +29,11 @@ public class Consulta {
         this.numero = numero;
     }
 
-    /* Método modificado para retornar a data apenas no padrão dd/MM/yy.
+    /**
+     * Método modificado para retornar a data apenas no padrão dd/MM/yy.
      * (converte dos padrões do mysql)
+     * 
+     * @return data = (yy/MM/yy)
      */
     public String getData() {
         if (data.contains("/")) {
@@ -42,8 +45,11 @@ public class Consulta {
         return newData;
     }
     
-    /* Conversão de data para os padrões do mysql -> yy-MM-dd
+    /**
+     * Conversão de data para os padrões do mysql -> yy-MM-dd
      * (isso permite inserir informações de data no formato dd/MM/yy no Java)
+     * 
+     *  @return data = (yy-MM-dd)
      */
     public String sqlData() {
         String[] dataSplit = getData().split("/");

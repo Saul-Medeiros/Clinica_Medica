@@ -20,7 +20,11 @@ public final class Paciente extends Pessoa {
         return cpf;
     }
     
-    /* Método retorna cpf formatado para impressão na tela */
+    /**
+     * Método retorna cpf formatado para impressão na tela
+     * 
+     * @return cpf = (000.000.000-00)
+     */
     public String formataCpf() {
         String cpfCompleto = StringUtils.leftPad(getCpf(), 11, '0');
         return cpfCompleto.substring(0,3) + "." + 
@@ -37,8 +41,11 @@ public final class Paciente extends Pessoa {
         return telefone;
     }
 
-    /* Número de telefone formatado para impressao na tela (é necessário 
+    /**
+     * Número de telefone formatado para impressao na tela (é necessário 
      * inserir o número com ddd). Ex: 61900000000
+     * 
+     * @return telefone = (00) 00000-0000
      */
     public String formataTelefone() {
         return "(" + getTelefone().substring(0,2) + ") " + 

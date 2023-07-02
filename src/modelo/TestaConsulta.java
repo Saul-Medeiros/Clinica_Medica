@@ -3,26 +3,23 @@ package modelo;
 public class TestaConsulta {
 
     public static void main(String[] args) {
+        Endereco[] endereco = new Endereco[4];
+        endereco[0] = new Endereco(1, "Santa Maria", 255);
+        endereco[1] = new Endereco(1, "Santa Maria", 255);
+        endereco[2] = new Endereco(3, "Gama Oeste", 2051);
+        endereco[3] = new Endereco(4, "Taguatinga Sul", 872);
+
+        Atendente atendente = new Atendente("João", endereco[0], 567, "Ensino médio");
+
+        Paciente paciente = new Paciente("Saul", endereco[1], "11111111111", "61940028922");
         
-        Consulta c = new Consulta(1, "2023-06-26", "15:00",
-            new Atendente("João",
-                new Endereco(1, "Santa Maria", 255),
-                567, "Ensino médio"
-            ),
-            new Paciente("Saul",
-                new Endereco(2, "Riacho Fundo 2", 898),
-                "11111111111", "61940028922"
-            ),
-            new Medico("Glauder",
-                new Endereco(3, "Gama Oeste", 2051),
-                "12345678", "Endocrinologista",
-                new Consultorio(25,
-                    new Endereco(4, "Taguatinga Sul", 872)
-                )
-            )
-        );
+        Consultorio consultorio = new Consultorio(25,endereco[3]);
+
+        Medico medico = new Medico("Glauder", endereco[2], "12345678", "Endocrinologista", consultorio);
+
+        Consulta consulta = new Consulta(1, "2023-06-26", "15:00", atendente, paciente, medico);
         
-        System.out.println(c);
+        System.out.println(consulta);
         
     }
     
