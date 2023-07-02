@@ -3,7 +3,7 @@ package testes.medico;
 import modelo.*;
 import persistencia.MedicoDAO;
 
-public class TestaMedicoDAOalteraAND {
+public class TestaMedicoDAOaltera {
 
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
