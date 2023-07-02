@@ -1,11 +1,7 @@
 package persistencia;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.*;
+import java.util.*;
 import modelo.Consulta;
 
 public class ConsultaDAO {
@@ -47,7 +43,6 @@ public class ConsultaDAO {
         return listaConsulta;
     }
     
-    // like
     public static List<Consulta> leTodos(char letra) throws Exception {
         List<Consulta> listaConsulta = new ArrayList<>();
         
@@ -87,7 +82,6 @@ public class ConsultaDAO {
         return listaConsulta;
     }
     
-    // in
     public static List<Consulta> leTodos(int numeroMenor, int numeroMaior)
             throws Exception {
         List<Consulta> listaConsulta = new ArrayList<>();
@@ -126,7 +120,6 @@ public class ConsultaDAO {
         return listaConsulta;
     }
     
-    // not between
     public static List<Consulta> leTodos(short numeroMenor, int numeroMaior) 
             throws Exception {
         List<Consulta> listaConsulta = new ArrayList<>();
@@ -225,7 +218,6 @@ public class ConsultaDAO {
         return row + " rows affected.";
     }
     
-    //not in
     public static String altera(Consulta consulta, int menorNumero,
                                 int maiorNumero) throws Exception {
         int row = 0;
@@ -255,7 +247,6 @@ public class ConsultaDAO {
         return row + " rows affected.";
     }
     
-    //equals
     public static String altera(Consulta consulta, int numero) 
             throws Exception {
         int row = 0;
@@ -284,7 +275,6 @@ public class ConsultaDAO {
         return row + " rows affected.";
     }
     
-    //and
     public static String altera(Consulta consulta, int numero, String horario)
             throws Exception {
         int row = 0;

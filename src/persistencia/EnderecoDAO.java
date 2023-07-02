@@ -1,11 +1,7 @@
 package persistencia;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.*;
+import java.util.*;
 import modelo.Endereco;
 
 public class EnderecoDAO {
@@ -41,7 +37,6 @@ public class EnderecoDAO {
         return listaEndereco;
     }
     
-    // like
     public static List<Endereco> leTodos(char letra) throws Exception {
         List<Endereco> listaEndereco = new ArrayList<>();
         
@@ -72,7 +67,6 @@ public class EnderecoDAO {
         return listaEndereco;
     }
     
-    // in
     public static List<Endereco> leTodos(int menorId, int maiorId)
             throws Exception {
         List<Endereco> listaEndereco = new ArrayList<>();
@@ -105,7 +99,6 @@ public class EnderecoDAO {
         return listaEndereco;
     }
     
-    // not between
     public static List<Endereco> leTodos(short menorId, int maiorId) 
             throws Exception {
         List<Endereco> listaEndereco = new ArrayList<>();
@@ -187,7 +180,6 @@ public class EnderecoDAO {
         return row + " rows affected.";
     }
 
-    //not in
     public static String altera(String rua, int cep, int menorId,
                                 int maiorId) throws Exception {
         int row = 0;
@@ -214,7 +206,6 @@ public class EnderecoDAO {
         return row + " rows affected.";
     }
     
-    // equals
     public static String altera(Endereco endereco, int id) throws Exception {
         int row = 0;
         
@@ -239,7 +230,6 @@ public class EnderecoDAO {
         return row + " rows affected.";
     }
     
-    //and
     public static String altera(Endereco endereco, int id, String ruaAntiga)
             throws Exception {
         int row = 0;
@@ -266,7 +256,6 @@ public class EnderecoDAO {
         return row + " rows affected.";
     }
     
-    //exclui
     public static String exclui(int id) throws Exception {
         int row = 0;
         

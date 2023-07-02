@@ -1,11 +1,7 @@
 package persistencia;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.*;
+import java.util.*;
 import modelo.Paciente;
 
 public class PacienteDAO {
@@ -43,7 +39,6 @@ public class PacienteDAO {
         return listaPaciente;
     }
     
-    // like
     public static List<Paciente> leTodos(char letra) throws Exception {
         List<Paciente> listaPaciente = new ArrayList<>();
         
@@ -76,7 +71,6 @@ public class PacienteDAO {
         return listaPaciente;
     }
     
-    // in
     public static List<Paciente> leTodos(String cpfMenor, String cpfMaior)
             throws Exception {
         List<Paciente> listaPaciente = new ArrayList<>();
@@ -111,7 +105,6 @@ public class PacienteDAO {
         return listaPaciente;
     }
     
-    // not between
     public static List<Paciente> leTodos(long cpfMenor, String cpfMaior)
             throws Exception {
         List<Paciente> listaPaciente = new ArrayList<>();
@@ -199,7 +192,6 @@ public class PacienteDAO {
         return row + " rows affected.";
     }
     
-    //not in
     public static String altera(Paciente paciente, String menorCpf,
                                 String maiorCpf) throws Exception {
         int row = 0;
@@ -227,7 +219,6 @@ public class PacienteDAO {
         return row + " rows affected.";
     }
     
-    // equals
     public static String altera(Paciente paciente, String cpf)
             throws Exception {
         int row = 0;
@@ -254,7 +245,6 @@ public class PacienteDAO {
         return row + " rows affected.";
     }
     
-    //and
     public static String altera(Paciente paciente, long cpf, String antigoNome)
             throws Exception {
         int row = 0;
@@ -282,7 +272,6 @@ public class PacienteDAO {
         return row + " rows affected.";
     }
     
-    //exclui
     public static String exclui(String cpf) throws Exception {
         int row = 0;
         

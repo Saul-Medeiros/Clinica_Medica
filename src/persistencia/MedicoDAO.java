@@ -1,11 +1,7 @@
 package persistencia;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.*;
+import java.util.*;
 import modelo.Medico;
 
 public class MedicoDAO {
@@ -45,7 +41,6 @@ public class MedicoDAO {
         return listaMedico;
     }
     
-    // like
     public static List<Medico> leTodos(char letra) throws Exception {
         List<Medico> listaMedico = new ArrayList<>();
         
@@ -80,7 +75,6 @@ public class MedicoDAO {
         return listaMedico;
     }
     
-    // in
     public static List<Medico> leTodos(String crmMenor, String crmMaior)
             throws Exception {
         List<Medico> listaMedico = new ArrayList<>();
@@ -117,7 +111,6 @@ public class MedicoDAO {
         return listaMedico;
     }
     
-    // not between
     public static List<Medico> leTodos(long crmMenor, String crmMaior)
             throws Exception {
         List<Medico> listaMedico = new ArrayList<>();
@@ -210,7 +203,6 @@ public class MedicoDAO {
         return row + " rows affected.";
     }
     
-    //not in
     public static String altera(Medico medico, String menorCrm, String maiorCrm)
             throws Exception {
         int row = 0;
@@ -239,7 +231,6 @@ public class MedicoDAO {
         return row + " rows affected.";
     }
     
-    // equals
     public static String altera(Medico medico, String crm) throws Exception {
         int row = 0;
         
@@ -266,7 +257,6 @@ public class MedicoDAO {
         return row + " rows affected.";
     }
     
-    //and
     public static String altera(Medico medico, long crm, String nome) 
             throws Exception {
         int row = 0;
@@ -295,7 +285,6 @@ public class MedicoDAO {
         return row + " rows affected.";
     }
     
-    //exclui
     public static String exclui(String crm) throws Exception {
         int row = 0;
         

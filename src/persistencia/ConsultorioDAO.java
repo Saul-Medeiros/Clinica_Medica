@@ -1,11 +1,7 @@
 package persistencia;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.*;
+import java.util.*;
 import modelo.Consultorio;
 
 public class ConsultorioDAO {
@@ -41,7 +37,6 @@ public class ConsultorioDAO {
         return listaConsultorio;
     }
     
-    // like
     public static List<Consultorio> leTodos(char letra) throws Exception {
         List<Consultorio> listaConsultorio = new ArrayList<>();
         
@@ -75,7 +70,6 @@ public class ConsultorioDAO {
         return listaConsultorio;
     }
     
-    // in
     public static List<Consultorio> leTodos(int numeroMenor, int numeroMaior)
             throws Exception {
         List<Consultorio> listaConsultorio = new ArrayList<>();
@@ -108,7 +102,6 @@ public class ConsultorioDAO {
         return listaConsultorio;
     }
     
-    // not between
     public static List<Consultorio> leTodos(short numeroMenor, int numeroMaior)
             throws Exception {
         List<Consultorio> listaConsultorio = new ArrayList<>();
@@ -190,7 +183,6 @@ public class ConsultorioDAO {
         return row + " rows affected.";
     }
     
-    //not in
     public static String altera(int enderecoId, int menorNumero,
                                 int maiorNumero) throws Exception {
         int row = 0;
@@ -216,7 +208,6 @@ public class ConsultorioDAO {
         return row + " rows affected.";
     }
     
-    // equals
     public static String altera(int enderecoId, int numero) throws Exception {
         int row = 0;
         
@@ -239,7 +230,6 @@ public class ConsultorioDAO {
         return row + " rows affected.";
     }
     
-    //and
     public static String altera(int enderecoId, Consultorio consultorio)
             throws Exception {
         int row = 0;
@@ -265,7 +255,6 @@ public class ConsultorioDAO {
         return row + " rows affected.";
     }
     
-    //exclui
     public static String exclui(int numero) throws Exception {
         int row = 0;
         

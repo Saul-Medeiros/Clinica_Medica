@@ -1,11 +1,7 @@
 package persistencia;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.*;
+import java.util.*;
 import modelo.Atendente;
 
 public class AtendenteDAO {
@@ -43,7 +39,6 @@ public class AtendenteDAO {
         return listaAtendente;
     }
     
-    // like
     public static List<Atendente> leTodos(char letra) throws Exception {
         List<Atendente> listaAtendente = new ArrayList<>();
         
@@ -76,7 +71,6 @@ public class AtendenteDAO {
         return listaAtendente;
     }
     
-    // in
     public static List<Atendente> leTodos(int menorMatricula,
                                           int maiorMatricula) throws Exception {
         List<Atendente> listaAtendente = new ArrayList<>();
@@ -111,7 +105,6 @@ public class AtendenteDAO {
         return listaAtendente;
     }
     
-    // not between
     public static List<Atendente> leTodos(short menorMatricula,
                                           int maiorMatricula) throws Exception {
         List<Atendente> listaAtendente = new ArrayList<>();
@@ -200,7 +193,6 @@ public class AtendenteDAO {
         return row + " rows affected.";
     }
     
-    //not in
     public static String altera(Atendente atendente, int menorMatricula,
                                 int maiorMatricula) throws Exception {
         int row = 0;
@@ -228,7 +220,6 @@ public class AtendenteDAO {
         return row + " rows affected.";
     }
     
-    // equals
     public static String altera(String nome, String formacao, int enderecoId,
                                 int matricula) throws Exception {
         int row = 0;
@@ -255,7 +246,6 @@ public class AtendenteDAO {
         return row + " rows affected.";
     }
     
-    //and
     public static String altera(Atendente atendente, int matricula,
                                 char letra) throws Exception {
         int row = 0;
