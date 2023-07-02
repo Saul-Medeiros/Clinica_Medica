@@ -26,7 +26,7 @@ public class TestaAtendenteDAOleTodos {
         return AtendenteDAO.leTodos('R');
     }
 
-    static List<Atendente> leTodosLikeNotBetween() throws Exception {
+    static List<Atendente> leTodosNotBetween() throws Exception {
         return AtendenteDAO.leTodos((short)111, 333);
     }
     
