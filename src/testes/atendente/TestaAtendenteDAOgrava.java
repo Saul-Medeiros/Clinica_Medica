@@ -1,7 +1,6 @@
 package testes.atendente;
 
-import modelo.Atendente;
-import modelo.Endereco;
+import modelo.*;
 import persistencia.AtendenteDAO;
 
 public class TestaAtendenteDAOgrava {

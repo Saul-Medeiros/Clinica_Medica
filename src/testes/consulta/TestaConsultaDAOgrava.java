@@ -1,9 +1,6 @@
 package testes.consulta;
 
-import modelo.Atendente;
-import modelo.Consulta;
-import modelo.Medico;
-import modelo.Paciente;
+import modelo.*;
 import persistencia.ConsultaDAO;
 
 public class TestaConsultaDAOgrava {
