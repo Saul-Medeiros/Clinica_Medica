@@ -6,7 +6,6 @@ public class TestaEnderecoDAOleUm {
 
     public static void main(String[] args) throws Exception {
         
-        // int(id)
         System.out.println(EnderecoDAO.leUm(1));
         
     }
