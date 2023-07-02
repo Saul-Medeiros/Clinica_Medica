@@ -1,8 +1,6 @@
 package testes.medico;
 
-import modelo.Consultorio;
-import modelo.Endereco;
-import modelo.Medico;
+import modelo.*;
 import persistencia.MedicoDAO;
 
 public class TestaMedicoDAOgrava {
@@ -10,7 +8,7 @@ public class TestaMedicoDAOgrava {
     public static void main(String[] args) throws Exception {
         
         Medico medico = new Medico();
-        medico.setCrm("77777777"); // padrão: 8 dígitos
+        medico.setCrm("77777777"); // 8 digits
         medico.setNome("Gabriel");
         medico.setEspecialidade("Radiologista");
         
@@ -22,7 +20,6 @@ public class TestaMedicoDAOgrava {
         medico.setEndereco(endereco);
         medico.setConsultorio(consultorio);
         
-        // Object[INSERT action]
         System.out.println(MedicoDAO.grava(medico));
         
     }
