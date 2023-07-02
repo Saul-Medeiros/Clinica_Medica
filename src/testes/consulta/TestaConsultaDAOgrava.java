@@ -12,23 +12,22 @@ public class TestaConsultaDAOgrava {
         
         Consulta consulta = new Consulta();
         consulta.setNumero(6);
-        consulta.setData("13/02/2024"); // padrão: yy-MM-dd ou dd/MM/yy
-        consulta.setHorario("15:00"); // padrão: hh:mm ou hh:mm:ss
+        consulta.setData("13/02/2024"); // yy-MM-dd or dd/MM/yy
+        consulta.setHorario("15:00"); // hh:mm or hh:mm:ss
         
         Atendente atendente = new Atendente();
-        atendente.setMatricula(111); // padrão: 3 dígitos
+        atendente.setMatricula(111); // 3 digits
         
         Paciente paciente = new Paciente();
-        paciente.setCpf("33333333333"); // padrão: 11 dígitos
+        paciente.setCpf("33333333333"); // 11 dígits
         
         Medico medico = new Medico();
-        medico.setCrm("44444444"); // padrão: 8 dígitos
+        medico.setCrm("44444444"); // 8 digits
         
         consulta.setAtendente(atendente);
         consulta.setPaciente(paciente);
         consulta.setMedico(medico);
         
-        // Object
         System.out.println(ConsultaDAO.grava(consulta));
         
     }

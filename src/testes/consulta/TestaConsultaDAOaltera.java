@@ -11,6 +11,8 @@ public class TestaConsultaDAOaltera {
         
     }
 
+    /* As classes abaixo fazem testes em métodos sobrecarregados */
+
     static String alteraAnd() throws Exception {
         Consulta consulta = new Consulta();
         
