@@ -11,7 +11,7 @@ public class TestaAtendenteDAOaltera {
         
     }
 
-    /* As classes abaixo fazem testes em métodos sobrecarregados */
+    /* Os métodos abaixo fazem testes em métodos sobrecarregados do pacote de persistência */
 
     static String alteraAnd() throws Exception {
         Atendente atendente = new Atendente();

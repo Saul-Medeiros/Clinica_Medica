@@ -12,7 +12,7 @@ public class TestaAtendenteDAOleTodos {
         
     }
 
-    /* As classes abaixo fazem testes em métodos sobrecarregados */
+    /* Os métodos abaixo fazem testes em métodos sobrecarregados do pacote de persistência */
 
     static List<Atendente> leTodos() throws Exception {
         return AtendenteDAO.leTodos();
