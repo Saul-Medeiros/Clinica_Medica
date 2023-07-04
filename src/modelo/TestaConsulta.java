@@ -3,9 +3,10 @@ package modelo;
 public class TestaConsulta {
 
     public static void main(String[] args) {
+
         Endereco[] endereco = new Endereco[4];
         endereco[0] = new Endereco(1, "Santa Maria", 255);
-        endereco[1] = new Endereco(1, "Santa Maria", 255);
+        endereco[1] = new Endereco(2, "Riacho Fundo 2", 898);
         endereco[2] = new Endereco(3, "Gama Oeste", 2051);
         endereco[3] = new Endereco(4, "Taguatinga Sul", 872);
 
