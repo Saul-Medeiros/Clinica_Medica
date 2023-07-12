@@ -23,7 +23,7 @@ public final class Paciente extends Pessoa {
     /**
      * Método retorna cpf formatado para impressão na tela
      * 
-     * @return cpf = (000.000.000-00)
+     * @return cpf: (000.000.000-00)
      */
     public String formataCpf() {
         String cpfCompleto = StringUtils.leftPad(getCpf(), 11, '0');

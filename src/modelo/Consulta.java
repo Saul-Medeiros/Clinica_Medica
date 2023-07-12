@@ -33,7 +33,7 @@ public class Consulta {
      * Método modificado para retornar a data apenas no padrão dd/MM/yy.
      * (converte dos padrões do mysql)
      * 
-     * @return data = (yy/MM/yy)
+     * @return data = (dd/MM/yy)
      */
     public String getData() {
         if (data.contains("/")) {

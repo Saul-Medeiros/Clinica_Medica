@@ -8,10 +8,10 @@ public class Endereco {
 
     public Endereco() {}
 
-    public Endereco(int id, String rua, int numero) {
+    public Endereco(int id, String rua, int cep) {
         this.id = id;
         this.rua = rua;
-        this.cep = numero;
+        this.cep = cep;
     }
     
     public int getId() {
