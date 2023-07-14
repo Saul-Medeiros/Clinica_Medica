@@ -43,16 +43,6 @@ CREATE TABLE `atendente` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `atendente`
---
-
-LOCK TABLES `atendente` WRITE;
-/*!40000 ALTER TABLE `atendente` DISABLE KEYS */;
-INSERT INTO `atendente` (`matricula`, `nome`, `formacao`, `endereco_id`) VALUES (111,'João','Ensino médio',1),(222,'Larissa','Ensino Médio',2),(333,'Mateus','Ensino Médio',3),(444,'Carlos','Superior em Administração',4),(555,'Ronaldo','Superior em Gestão de RH',5);
-/*!40000 ALTER TABLE `atendente` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `consulta`
 --
 
@@ -78,16 +68,6 @@ CREATE TABLE `consulta` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `consulta`
---
-
-LOCK TABLES `consulta` WRITE;
-/*!40000 ALTER TABLE `consulta` DISABLE KEYS */;
-INSERT INTO `consulta` (`numero`, `data`, `horario`, `paciente_cpf`, `medico_crm`, `atendente_matricula`) VALUES (1,'2023-06-26','15:00:00','11111111111','55555555',111),(2,'2023-03-01','16:00:00','22222222222','11111111',222),(3,'2022-02-07','12:00:00','33333333333','22222222',333),(4,'2012-05-17','13:00:00','44444444444','33333333',444),(5,'2017-08-16','09:00:00','55555555555','44444444',555);
-/*!40000 ALTER TABLE `consulta` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `consultorio`
 --
 
@@ -104,16 +84,6 @@ CREATE TABLE `consultorio` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `consultorio`
---
-
-LOCK TABLES `consultorio` WRITE;
-/*!40000 ALTER TABLE `consultorio` DISABLE KEYS */;
-INSERT INTO `consultorio` (`numero`, `endereco_id`) VALUES (30,1),(20,2),(35,3),(25,4),(40,5);
-/*!40000 ALTER TABLE `consultorio` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `endereco`
 --
 
@@ -128,16 +98,6 @@ CREATE TABLE `endereco` (
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `endereco`
---
-
-LOCK TABLES `endereco` WRITE;
-/*!40000 ALTER TABLE `endereco` DISABLE KEYS */;
-INSERT INTO `endereco` (`id`, `rua`, `cep`) VALUES (1,'Santa Maria',255),(2,'Riacho Fundo 2',898),(3,'Gama Oeste',2051),(4,'Taguatinga Sul',872),(5,'Ceilandia',333);
-/*!40000 ALTER TABLE `endereco` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `medico`
@@ -162,16 +122,6 @@ CREATE TABLE `medico` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `medico`
---
-
-LOCK TABLES `medico` WRITE;
-/*!40000 ALTER TABLE `medico` DISABLE KEYS */;
-INSERT INTO `medico` (`crm`, `nome`, `especialidade`, `consultorio_numero`, `endereco_id`) VALUES ('11111111','Miguel','Nutricionista',20,1),('22222222','Pedro','Cardiologista',30,2),('33333333','Hugo','Dentista',35,4),('44444444','Victória','Fisioterapeuta',40,5),('55555555','Glauder','Endocrinologista',25,3);
-/*!40000 ALTER TABLE `medico` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `paciente`
 --
 
@@ -189,17 +139,6 @@ CREATE TABLE `paciente` (
   CONSTRAINT `fk_paciente_endereco1` FOREIGN KEY (`endereco_id`) REFERENCES `endereco` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `paciente`
---
-
-LOCK TABLES `paciente` WRITE;
-/*!40000 ALTER TABLE `paciente` DISABLE KEYS */;
-INSERT INTO `paciente` (`cpf`, `nome`, `telefone`, `endereco_id`) VALUES ('11111111111','Saul','61940028922',2),('22222222222','Marcos','61992929292',1),('33333333333','Yago','61993939393',3),('44444444444','Priscila','61994949494',4),('55555555555','Yasmin','61995959595',5);
-/*!40000 ALTER TABLE `paciente` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
